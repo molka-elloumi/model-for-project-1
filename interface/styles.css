@@ -1,0 +1,130 @@
+/* Global reset and font */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  /* Welcome Page Styling */
+  .welcome-page {
+    background-color: #0A1784; /* Dark blue background */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .logo {
+    width: 250px;
+    margin-bottom: 40px;
+  }
+  
+  .login-button {
+    display: inline-block;
+    padding: 12px 40px;
+    background-color: white;
+    color: #0A1784;
+    border-radius: 30px;
+    font-size: 16px;
+    text-decoration: none;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+  }
+  
+  .login-button:hover {
+    background-color: #e6e6e6;
+  }
+  /* Page 2: Dashboard */
+.dashboard {
+    display: flex;
+    height: 100vh;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .sidebar {
+    background-color: #0A1784;
+    color: white;
+    padding: 20px;
+    width: 180px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    text-align: center;
+  }
+  
+  .logo-small {
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  
+  .avatar {
+    width: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .role {
+    color: #87cefa;
+    font-size: 0.9rem;
+  }
+  
+  .main-content {
+    flex-grow: 1;
+    background-color: #a9c5e7;
+    padding: 30px;
+    border-radius: 0 20px 20px 0;
+  }
+  
+  .top-bar {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 30px;
+  }
+  
+  .search {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    width: 200px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+  
+  .card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+  
+  .card img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+  }
+  
+  .prediction-card {
+    text-decoration: none;
+    color: inherit;
+  }
+  
