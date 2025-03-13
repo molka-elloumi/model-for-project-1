@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Doctor Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="dashboard">
+  <div class="sidebar">
+    <img src="images/logo.png" class="logo-small" alt="Logo" />
+    <img src="images/doctor.png" class="avatar" alt="Doctor" />
+    <h2>John Doe</h2>
+    <p class="role">doctor</p>
+  </div>
+
+  <div class="main-content">
+    <div class="top-bar">
+      <input type="text" placeholder="Search..." class="search" />
+    </div>
+
+    <div class="grid">
+      <div class="card">
+        <img src="images/blood.png" />
+        <p>blood pressure</p>
+      </div>
+      <div class="card">
+        <img src="images/heart.png" />
+        <p>heart rate</p>
+      </div>
+      <div class="card">
+        <img src="images/platelets.png" />
+        <p>platelets</p>
+      </div>
+      <div class="card">
+        <img src="images/graph.png" />
+        <p>serum creatinine</p>
+      </div>
+      <a href="prediction.html" class="card prediction-card">
+        <img src="images/predict.png" />
+        <p>prediction model</p>
+      </a>
+      <div class="card empty">
+        <p>next patient</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
