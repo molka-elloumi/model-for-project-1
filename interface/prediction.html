@@ -3,36 +3,95 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Prediction Page</title>
+  <title>Prediction Form</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body class="prediction-page">
-  <div class="form-container">
-    <form id="predictForm">
-      <div class="form-group">
-        <label>Age</label>
-        <input type="number" name="age" required>
+<body class="dashboard-page">
+  <header class="topbar">
+    <div class="topbar-left">
+      <img src="C:\Users\INFOTEC\Documents\GitHub\model-for-project-1\interface\pics\vecteezy_doctor-logo-or-medical-logo-template-or-health-care-clinic_12829538.jpg" alt="Logo" class="logo" />
+      <img src="C:\Users\INFOTEC\Documents\GitHub\model-for-project-1\interface\pics\doctor.png" alt="Doctor" class="doctor-icon" />
+      <div class="doctor-info">
+        <h3>John Doe</h3>
+        <p>doctor</p>
       </div>
-      <div class="form-group">
-        <label>Anaemia</label>
-        <input type="number" name="anaemia" required>
+    </div>
+    <input type="text" placeholder="Search..." class="search-bar" />
+  </header>
+  
+  <main class="form-container prediction-form">
+    <form action="http://127.0.0.1:5000/predict" method="POST" class="input-form">
+      <div class="input-grid">
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" name="age" required />
+        </div>
+        <div class="form-group">
+          <label for="anaemia">Anaemia</label>
+          <div class="radio-group">
+            <label><input type="radio" name="anaemia" value="1" required /> Yes</label>
+            <label><input type="radio" name="anaemia" value="0" required /> No</label>
+          </div>        
+        </div>
+        <div class="form-group">
+          <label for="creatinine_phosphokinase">Creatinine Phosphokinase</label>
+          <input type="number" name="creatinine_phosphokinase" required />
+        </div>
+        <div class="form-group">
+          <label for="diabetes">Diabetes</label>
+          <div class="radio-group">
+            <label><input type="radio" name="diabetes" value="1" required /> Yes</label>
+            <label><input type="radio" name="diabetes" value="0" required /> No</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="ejection_fraction">Ejection Fraction</label>
+          <input type="number" name="ejection_fraction" required />
+        </div>
+        <div class="form-group">
+          <label for="high_blood_pressure">High Blood Pressure</label>
+          <div class="radio-group">
+            <label><input type="radio" name="high_blood_pressure" value="1" required /> Yes</label>
+            <label><input type="radio" name="high_blood_pressure" value="0" required /> No</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="platelets">Platelets</label>
+          <input type="number" name="platelets" required />
+        </div>
+        <div class="form-group">
+          <label for="serum_creatinine">Serum Creatinine</label>
+          <input type="number" name="serum_creatinine" required />
+        </div>
+        <div class="form-group">
+          <label for="serum_sodium">Serum Sodium</label>
+          <input type="number" name="serum_sodium" required />
+        </div>
+        <div class="form-group">
+          <label for="sex">Sex</label>
+          <div class="radio-group">
+            <label><input type="radio" name="sex" value="1" required /> Male</label>
+            <label><input type="radio" name="sex" value="0" required /> Female</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="smoking">Smoking</label>
+          <div class="radio-group">
+            <label><input type="radio" name="smoking" value="1" required /> Yes</label>
+            <label><input type="radio" name="smoking" value="0" required /> No</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="time">Time</label>
+          <input type="number" name="time" required />
+        </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" required />
+        </div>
       </div>
-      <div class="form-group">
-        <label>Creatinine</label>
-        <input type="number" name="creatinine" required>
-      </div>
-      <div class="form-group">
-        <label>Diabetes</label>
-        <input type="number" name="diabetes" required>
-      </div>
-      <div class="form-group">
-        <label>Ejection Fraction</label>
-        <input type="number" name="ejection_fraction" required>
-      </div>
-      <div class="form-group">
-        <label>Blood Pressure</label>
-        <input type="number" name="bp" required>
-      </div>
-      <div class="form-group">
-        <label>Platelets</label>
-        <input type="number" name="platelet
+      <button type="submit" class="submit-button" onclick="window.location.href='result.html'; return false;">Predict</button>
+    </form>
+  </main>
+</body>
+</html>
