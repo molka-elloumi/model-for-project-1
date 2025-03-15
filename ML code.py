@@ -94,3 +94,72 @@ import numpy as np
 
 def detect_outliers_iqr(data, column):
     Q1 = data[column].quantile(0.25)
+print("\nMissing Values Per Column:\n")
+print(df.isnull().sum())
+
+# Visualizing missing values using a heatmap
+plt.figure(figsize=(4, 4))
+sns.heatmap(df.isnull(), cmap='viridis', cbar=False, yticklabels=False)
+plt.title("Missing Values Heatmap")
+plt.show()
+
+plt.figure(figsize=(6, 6))
+df.boxplot(rot=90)
+plt.title("Boxplot of Numerical Features (Before Handling Outliers)")
+plt.show()
+
+"""This boxplot visualization helps detect outliers in numerical features.
+We applied the IQR (Interquartile Range) method:
+"""
+
+import pandas as pd
+import numpy as np
+
+def detect_outliers_iqr(data, column):
+    Q1 = data[column].quantile(0.25)
+print("\nMissing Values Per Column:\n")
+print(df.isnull().sum())
+
+# Visualizing missing values using a heatmap
+plt.figure(figsize=(4, 4))
+sns.heatmap(df.isnull(), cmap='viridis', cbar=False, yticklabels=False)
+plt.title("Missing Values Heatmap")
+plt.show()
+
+plt.figure(figsize=(6, 6))
+df.boxplot(rot=90)
+plt.title("Boxplot of Numerical Features (Before Handling Outliers)")
+plt.show()
+
+"""This boxplot visualization helps detect outliers in numerical features.
+We applied the IQR (Interquartile Range) method:
+"""
+
+import pandas as pd
+import numpy as np
+
+def detect_outliers_iqr(data, column):
+    Q1 = data[column].quantile(0.25)
+print("\nMissing Values Per Column:\n")
+print(df.isnull().sum())
+
+# Visualizing missing values using a heatmap
+plt.figure(figsize=(4, 4))
+sns.heatmap(df.isnull(), cmap='viridis', cbar=False, yticklabels=False)
+plt.title("Missing Values Heatmap")
+plt.show()
+
+plt.figure(figsize=(6, 6))
+df.boxplot(rot=90)
+plt.title("Boxplot of Numerical Features (Before Handling Outliers)")
+plt.show()
+
+"""This boxplot visualization helps detect outliers in numerical features.
+We applied the IQR (Interquartile Range) method:
+"""
+
+import pandas as pd
+import numpy as np
+
+def detect_outliers_iqr(data, column):
+    Q1 = data[column].quantile(0.25)
