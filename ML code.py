@@ -163,3 +163,23 @@ import numpy as np
 
 def detect_outliers_iqr(data, column):
     Q1 = data[column].quantile(0.25)
+def detect_outliers_iqr(data, column):
+    Q1 = data[column].quantile(0.25)
+    Q3 = data[column].quantile(0.75)
+    IQR = Q3 - Q1
+    lower_bound = Q1 - 1.5 * IQR
+    upper_bound = Q3 + 1.5 * IQR
+    return data[(data[column] < lower_bound) | (data[column] > upper_bound)]
+
+# Assuming 'df' is your DataFrame
+def analyze_outliers(df):
+    outliers = {col: detect_outliers_iqr(df, col) for col in df.select_dtypes(include=[np.number]).columns}
+
+    for col, outlier_rows in outliers.items():
+        print(f"Outliers detected in {col}: {len(outlier_rows)}")
+
+    return outliers
+
+outliers = analyze_outliers(df)
+
+"""Finding
